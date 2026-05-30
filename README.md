@@ -56,10 +56,10 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+   > I think it should be included in the diagram because the transient state is a crucial part of getting the data from the database into the project proper.
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+   > I need to use `await` because each of the component functions also await data from the api, if removed, it will only give an object promise because the rest of the code was run without giving the proper opportunity to fetch the api data for each of the functions
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > after the purchase combo button is pressed the total is stringified and posted to the database, where the html for it will be built in sales.js and then properly rendered in main.js
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > .map() can acheive much of what a for..of loop can acheive for much less real estate in one's project, along with more control over how its process, at the expense of more complication over certain use cases, such as a needed Promise.all() added along with the .map() if using async/await calls. At the same time, it shouldn't be an outright replacement for .map(), just as an example, if one wishes to stop a processing of data in an array, its much easier to process that data with a for..of loop over .map(), not saying that one can't if they want, using things like .find() or .findIndex, its just that method can become messy where for..of is concise and clean. 
