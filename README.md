@@ -39,17 +39,7 @@ Given the description and animation above...
 1. Make a list of what modules need to be created to make your application as modular as possible. Create a **Dependency Graph** for the project to be reviewed once you are complete with the assessment.
 1. Create a **Sequence Diagram** that visualizes what your algorithm is for this project. We'll give you a minimal starting point.
 
-```mermaid
-sequenceDiagram
-    participant Main
-    Main->>Vegetables: Generate vegetable options
-    Vegetables-->>Main: Here are some radio buttons
-    participant Vegetables
-    participant TransientState
-    TransientState->>API: Save this dinner order
-    API-->>TransientState: Order saved
-    participant API
-```
+(Both the Dependency Graph and Sequence Diagram are found in the images folder)
 
 ## Vocabulary and Understanding
 
